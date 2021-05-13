@@ -1,0 +1,79 @@
+
+::placeholder
+{
+	color: grey;
+	font-size: 20px;
+}
+.topnav {
+  background-color: #fff;
+  overflow: hidden;
+  width:100%;
+  position: fixed;
+  border-bottom: 2px solid #E75480;
+  margin-left: 90px;
+  top: 0;
+  padding-top: 14px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 50px;
+}
+
+.topnav a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 14px 56px 0px 60px;
+  text-decoration: none;
+  font-size: 25px;
+  text-align: center;
+  display: inline-block;
+}
+
+
+ a.logo {
+  background-color: white;
+  border-bottom: 2px solid #E75480;
+  top: 15px;
+}
+
+.circle{
+  background-image: url('bg.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.shop{
+  background-color: #9400D3;
+  color:white;
+  width:100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.boxx{
+  width: 400px;
+  height: 500px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 70px;
+}
+
+.boxy{
+  width: 400px;
+  height: 500px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 70px;
+}
+
+.boxc{
+  display: flex;
+  justify-content: space-between;
+}
+

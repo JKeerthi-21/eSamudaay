@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>eSamudaay</title>
+	<link rel = "icon" href = "logo.jpeg" type = "image/x-icon">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+
+<body>
+  
+	<div>
+			<a class="logo" href="index.html" style="position: fixed; top: 0"> <img src="logo.jpeg" width="90px" height="88px" float="left"> <a/>
+
+			<div class="topnav">
+			  
+			  <a href=""><img src="account.jpg" width="40px" height="40px" title="Account"></a>
+			  <a href=""><img src="cart.jpg" width="40px" height="40px" title="Cart"></a>
+			  <a href=""><img src="orders.jpg" width="40px" height="40px" title="Orders"></a>
+			  <a href=""><img src="stores.jpg" width="40px" height="40px" title="Stores"></a>
+			  <a href="" style="padding-right: 400px;color:#30106B">Home</a>
+			</div>
+		</br></br></br></br></br></br></br></br></br>
+			<div class="circle">
+
+				<img src="logo.jpeg" width="80px" height="80px" style="margin-top: 10px;margin-right: 10px" align="left">&nbsp;
+				<span style="font-size: 80px;font-weight: bold; margin-top: 50px;color: white">eSamudaay</span>
+				<span style="float: right;margin-top: 30px;margin-right: 40px"><img src="location.jpg" width="50px" height="50px" style="margin-top: 0px">
+					&nbsp;<span style="font-size:40px;margin-top: 50px;color: white;">Udipi</span></span>
+
+				
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<div><button style="margin-bottom: 70px;margin-left: 110px;width: 50px;height: 50px"><img src="search.jpg" width="30px" height="30px"></button>
+				<input type="text" placeholder="Search.." style="height: 40px;width: 80%;margin-bottom: 70px;margin-left: 50px">
+			</div>
+				
+			</div>
+
+			</br></br></br></br>
+
+
+
+			<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="m1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="m2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="m3.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+			<h2 style="color:#30106B;font-size: 60px;font-weight: bold">Products</h2>
+			<h5 style="font-size: 40px">Product Categories</h5>
+
+			<div class="box">
+				<div><a href=""><span><img src="t1.jpeg" align="left" style="margin-left: 0px"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href=""><span><img src="t2.jpeg" align="center"></span></a>
+					<a href=""><span><img src="t3.jpeg" align="right" style="margin-right: 0px"></span></a>
+				</div>
+			</div>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+			<div class="box">
+				<div><a href=""><span><img src="t4.jpeg" align="left"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href=""><span><img src="t5.jpeg" align="center"></span></a>
+					<a href=""><span><img src="t6.jpeg" align="right"></span></a>
+				</div>
+			</div>
+
+
+			<h3 style="font-size: 60px">Featured Stores</h3>
+		</br>
+
+			<div>
+				<div class="boxc">
+
+					<span class="boxx">
+						<img src="s1.jpeg" align="center" width="200" height="200">
+						<p style="font-size: 30px;text-align: center;">Baba Vegetables and Fruits</p>
+						<p style="color: green;font-size: 20px"><img src="del.jpeg" width="50" height="50">Delivery Available</p>
+						<p class="shop"><a href="" style="font-size: 40px;color: white;text-decoration: none">View Shop</a></p>
+
+					</span>
+
+					<span class="boxy">
+						<img src="s2.jpeg" align="center" width="200" height="200">
+						<p style="font-size: 30px;text-align: center;">Hotel Sammanna</p>
+						<p style="color: green;font-size: 20px"><img src="del.jpeg" width="50" height="50">Delivery Available</p>
+						<p class="shop"><a href="" style="font-size: 40px;color: white;text-decoration: none">View Shop</a></p>
+
+					</span>
+
+
+
+				</div>
+
+				<br><br><br><br><br><br><br><br><br>
+
+				<div class="boxc">
+
+					<span class="boxx">
+						<img src="s3.jpeg" align="center" width="200" height="200">
+						<p style="font-size: 30px;text-align: center;">Dollops</p>
+						<p style="color: green;font-size: 20px"><img src="del.jpeg" width="50" height="50">Delivery Available</p>
+						<p class="shop"><a href="" style="font-size: 40px;color: white;text-decoration: none">View Shop</a></p>
+
+					</span>
+
+					<span class="boxy">
+						<img src="s4.jpeg" align="center" width="200" height="200">
+						<p style="font-size: 30px;text-align: center;">Century Farm Products</p>
+						<p style="color: green;font-size: 20px"><img src="del.jpeg" width="50" height="50">Delivery Available</p>
+						<p class="shop"><a href="" style="font-size: 40px;color: white;text-decoration: none">View Shop</a></p>
+
+					</span>
+
+
+
+				</div>
+				<br><br><br><br><br><br><br><br><br>
+
+				<div class="boxc">
+
+					<span class="boxx">
+						<img src="s5.jpeg" align="center" width="200" height="200">
+						<p style="font-size: 30px;text-align: center;">Iris Florists</p>
+						<p style="color: #FF4D01;font-size: 20px"><img src="pick.jpeg" width="50" height="50">Store Pickup</p>
+						<p class="shop"><a href="" style="font-size: 40px;color: white;text-decoration: none">View Shop</a></p>
+
+					</span>
+
+					<span class="boxy">
+						<img src="s6.jpeg" align="center" width="200" height="200">
+						<p style="font-size: 30px;text-align: center;">Westind Country Club</p>
+						<p style="color: #c3015c;font-size: 20px"><img src="closed.jpeg" width="50" height="50">Shop Closed</p>
+						<p class="shop"><a href="" style="font-size: 40px;color: white;text-decoration: none">View Shop</a></p>
+
+					</span>
+
+
+
+				</div>
+				<br><br><br><br><br><br><br><br><br>
+
+				<div class="boxc">
+
+					<span class="boxx">
+						<img src="s7.jpeg" align="center" width="200" height="200">
+						<p style="font-size: 30px;text-align: center;">Fullfills</p>
+						<p style="color: #c3015c;font-size: 20px"><img src="closed.jpeg" width="50" height="50">Shop Closed</p>
+						<p class="shop"><a href="" style="font-size: 40px;color: white;text-decoration: none">View Shop</a></p>
+
+					</span>
+
+					<span class="boxy">
+						<img src="s8.jpeg" align="center" width="200" height="200">
+						<p style="font-size: 30px;text-align: center;">Cafe Udipi</p>
+						<p style="color: #c3015c;font-size: 20px"><img src="closed.jpeg" width="50" height="50">  Shop Closed</p>
+						<p class="shop"><a href="" style="font-size: 40px;color: white;text-decoration: none">View Shop</a></p>
+
+					</span>
+
+
+
+				</div>
+
+
+
+
+			</div>
+
+	</div>
+
+</body>
+
+</html>
